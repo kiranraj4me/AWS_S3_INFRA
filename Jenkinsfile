@@ -31,6 +31,7 @@ stages {
             steps {
                 echo 'Deploying....'
                       sh 'whoami && pwd'
+                      sh 'mkdir -pv /var/terraform/s3_website_$scmBranch/'
                       sh 'ls -ls /var/terraform/s3_website_$scmBranch/'
                       sh 'mv /var/terraform/s3_website_$scmBranch/terraform.tfstate source/'
                       sh 'cd source  && terraform init && terraform plan -var env=$scmBranch && terraform apply -var env=$scmBranch -auto-approve'
