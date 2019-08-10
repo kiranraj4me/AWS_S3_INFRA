@@ -1,7 +1,7 @@
   pipeline {
     agent any
     environment{  
-      scmUrl = "git@github.com:kiranraj4me/aws_terraform_s3website.git"
+      scmUrl = "git@github.com:kiranraj4me/AWS_S3_INFRA.git"
       scmBranch = "${env.BRANCH_NAME}" 
       shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'")
       commitId = sh(returnStdout: true, script: "git rev-parse --short HEAD") 
