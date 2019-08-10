@@ -14,8 +14,8 @@ resource "aws_cloudfront_distribution" "web" {
 
   restrictions {
     geo_restriction {
-      locations        = ["US"]
-      restriction_type = "blacklist"
+      locations        = ["IN"]
+      restriction_type = "whitelist"
     }
   }
 
