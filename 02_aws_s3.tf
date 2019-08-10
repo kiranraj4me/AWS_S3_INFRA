@@ -1,6 +1,6 @@
 provider "aws" {
   region = "${var.region}"
-  shared_credentials_file = "/var/credentials"
+  shared_credentials_file = "/var/terraform/credentials"
 }
 
 resource "aws_s3_bucket" "website" {
