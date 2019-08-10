@@ -38,7 +38,7 @@ resource "aws_cloudfront_distribution" "web" {
       }
     }
 
-    viewer_protocol_policy = "redirect-to-https"
+    viewer_protocol_policy = "allow-all"
     min_ttl     = "0"
     default_ttl = "86400"
     max_ttl     = "31536000"
